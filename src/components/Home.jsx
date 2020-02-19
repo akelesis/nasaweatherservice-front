@@ -14,13 +14,9 @@ export default class Home extends Component {
     state = {...initialState}
 
     UNSAFE_componentWillMount(){
-        axios.post(baseUrl)
+            axios.get(baseUrl)
             .then(res => {
-                axios.get(baseUrl)
-                    .then(res => {
-                        this.setState({sols: res.data})
-                    })
-                    .catch(err => {console.log(err)})
+                this.setState({sols: res.data})
             })
             .catch(err => {console.log(err)})
     }
