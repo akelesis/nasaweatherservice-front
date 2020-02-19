@@ -12,18 +12,14 @@ const initialState = {
 export default class Home extends Component {
     state = { ...initialState }
     UNSAFE_componentWillMount(){
-        axios.post(baseUrl)
+        let id = this.props.match.params.id
+        const newUrl = `${baseUrl}\\${id}`
+        axios.get(newUrl)
             .then(res => {
-                console.log("Postagem feita!" + res.data)
-                let id = this.props.match.params.id
-                const newUrl = `${baseUrl}\\${id}`
-                axios.get(newUrl)
-                    .then(res => {
-                        this.setState( {sol: res.data} )
-                        console.log(this.state.sol.averageTemp)
-                    })
+                this.setState( {sol: res.data} )
+                console.log(this.state.sol.averageTemp)
             })
-            .catch(err => console.log(err))
+            .catch(err => {console.log(err)})
     }
 
     returnHome(){
