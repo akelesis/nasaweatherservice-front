@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+
+.solLongVersion{
+    height: 800px;
+    width: 800px;
+    padding: 5px;
+    box-shadow: 4px 3px 10px #222;
+    color: #aaa;
+    border-radius: 5px;
+    background-color: rgb(78, 89, 94);
+    font-family: 'Tomorrow', sans-serif;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.solLongVersion p{
+    width: 100%;
+}
+
+.solLongVersion img{
+    margin-bottom: 20px;
+    width: 800px;
+    object-fit: cover;
+    text-align: center;
+}
+
+.returnButton{
+    height: 50px;
+    width: 300px;
+    background-color: rgb(20, 90, 148);
+    border-radius: 5px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tomorrow', sans-serif;
+    box-shadow: 3px 3px 10px #555;
+    margin: 15px 0 0 0;
+}
+
+.returnButton:hover{
+    background-color: rgb(28, 111, 179);
+    color: #ccc;
+    box-shadow: 1px 1px 5px #555;
+    cursor: pointer;
+}
